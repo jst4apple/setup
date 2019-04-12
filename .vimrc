@@ -10,7 +10,6 @@ let mapleader=";"
 filetype on
 " 根据侦测到的不同类型加载对应的插件
 filetype plugin on
-
 " <<
 
 " >>
@@ -108,6 +107,10 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
+Plugin 'w0rp/ale'
+Plugin 'python-mode/python-mode'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'wannesm/wmgraphviz.vim'
 
 " 插件列表结束
 call vundle#end()
@@ -522,4 +525,10 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 " 调用 gundo 树
 nnoremap <Leader>ud :GundoToggle<CR>
+
+
+map <Leader>pl :TlistToggle<CR>
+
+
+
 
