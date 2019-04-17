@@ -53,6 +53,7 @@ nmap <Leader>M %
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+map <leader><leader><leader> :edit ~/.vimrc<cr>
 " >>
 " 其他
 
@@ -499,11 +500,12 @@ set undofile
 
 " 保存快捷键
 "map <leader>ss :mksession! my.vim<cr> :wviminfo! my.viminfo<cr>
-map <leader>ss :mksession! my.vim<cr>
+source ~/.vim/bundle/vim_plugin/ProjectMng/project.vim
+map <leader>ps :PS<cr>
 
 " 恢复快捷键
 "map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
-map <leader>rs :source my.vim<cr>
+map <leader>po :PO 0<cr>
 
 " <<
  
