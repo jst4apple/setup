@@ -99,6 +99,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'scrooloose/nerdtree'
@@ -112,7 +113,7 @@ Plugin 'w0rp/ale'
 Plugin 'python-mode/python-mode'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'wannesm/wmgraphviz.vim'
-
+Plugin 'tpope/vim-surround'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
@@ -462,6 +463,7 @@ nmap <Leader>man :Man 3 <cword><CR>
 
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
 nmap <Leader>fl :NERDTreeToggle<CR>
+nmap <Leader>ff :NERDTreeFocus<CR>
 " 设置 NERDTree 子窗口宽度
 let NERDTreeWinSize=22
 " 设置 NERDTree 子窗口位置
@@ -480,6 +482,7 @@ let NERDTreeAutoDeleteBuffer=1
  
 " 显示/隐藏 MiniBufExplorer 窗口
 map <Leader>bl :MBEToggle<cr>
+map <Leader>bf :MBEFocus<cr>
 
 " buffer 切换快捷键
 map <Tab> :MBEbn<cr>
@@ -492,7 +495,7 @@ map <S-Tab> :MBEbp<cr>
 " 环境恢复
 
 " 设置环境保存项
-set sessionoptions="blank,globals,localoptions,tabpages,sesdir,folds,help,options,resize,winpos,winsize"
+set sessionoptions="blank,globals,localoptions,tabpages,sesdir,folds,help,options,resize,winpos,winsize,buffers"
 
 " 保存 undo 历史。必须先行创建 .undo_history/
 set undodir=~/.undo_history/
@@ -501,12 +504,23 @@ set undofile
 " 保存快捷键
 "map <leader>ss :mksession! my.vim<cr> :wviminfo! my.viminfo<cr>
 source ~/.vim/bundle/vim_plugin/ProjectMng/project.vim
+source ~/.vim/bundle/vim_plugin/KGMNG/KG.vim
 map <leader>ps :PS<cr>
-
+map <leader>pc :PC<cr>
 " 恢复快捷键
+"
 "map <leader>rs :source my.vim<cr> :rviminfo my.viminfo<cr>
 map <leader>po :PO 0<cr>
 
+"LOG
+map <leader><leader>v  :KLV<cr>
+map <leader><leader>s  :KLS<cr>
+map <leader><leader>c  :KLC<cr>
+" KG 
+map <leader>kc  :KGC<cr>
+map <leader>ke  :KGE<cr>
+map <leader>kq  :KGQ<cr>
+map <leader>ks  :KGS<cr>
 " <<
  
 " 设置快捷键实现一键编译及运行
@@ -530,6 +544,7 @@ nnoremap <Leader>ud :GundoToggle<CR>
 
 
 map <Leader>pl :TlistToggle<CR>
+map <Leader>tf :TlistFocus<CR>
 
 
 
